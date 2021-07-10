@@ -8,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -65,10 +63,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             String imageUrl = movie.getPosterPath();
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
-
-            Glide.with(context)
-                .load(imageUrl)
-                .into(ivPoster);
+            new MovieImageTask(ivPoster).execute(imageUrl);
+//            new MovieImageTask(ivPoster).execute(imageUr);
+//            MovieImageTask loadImage = new MovieImageTask(ivPoster).onPostExecute();
+//            Glide.with(context)
+//                .load(imageUrl)
+//                .into(ivPoster);
         }
     }
 }

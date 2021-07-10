@@ -1,18 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rvLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-   >
+    android:layout_margin="10dp">
+
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        />
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -22,6 +20,7 @@
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:ellipsize="end"
+        android:lines="1"
         android:maxLines="2"
         android:minLines="1"
         android:singleLine="true"
@@ -37,7 +36,7 @@
         android:layout_toEndOf="@+id/ivPoster"
         android:ellipsize="end"
         android:maxLines="7"
-        android:minLines="5"
+        android:minLines="1"
         tools:text="Description" />
 
 </RelativeLayout>
